@@ -286,7 +286,7 @@ def main():
                step, logger, batch_size, args.loss_fn)
         test(model, testloader, device, criterion, logger, step)
         save_checkpoint({'epoch':epoch, 'state_dict':model.state_dict(), \
-                'optimizer':optimizer.state_dict()},epoch)
+                'optimizer':optimizer.state_dict()},epoch,save_path)
         if lr_decay_param == 0:
             if epoch == decay_epochs[decay_idx]:
                 adjust_learning_rate(optimizer, lr, decay_idx, decay_param)
