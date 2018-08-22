@@ -220,7 +220,7 @@ def main():
         decay_param = 2
     elif lr_decay_method == 'retina':
         decay_epochs = [int(total_epoch*2/3),int(total_epoch*8/9)]
-        decay_param = 2
+        decay_param = 10
     decay_idx = 0
 
     if args.debug == 'True':
