@@ -207,7 +207,7 @@ def main():
             else: continue
             print(img_path)
 
-    if args.data_name == 'COCO':
+    if args.data == 'COCO':
         f = open(save_path+'/val_epoch_{}/coco_results.txt'.format(args.epoch), 'w')
         json.dump(result,f)
 
